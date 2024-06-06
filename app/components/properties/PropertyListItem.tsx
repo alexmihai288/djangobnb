@@ -12,6 +12,12 @@ export const PropertyListItem = () => {
           className="hover:scale-110 object-cover transition h-full w-full"
           alt="Beach house"
         />{" "}
+        <div className="mt-2">
+          <p className="text-lg font-bold">Property name</p>
+        </div>
+        <div className="mt-2">
+          <p className="text-sm text-gray-500">$200</p>
+        </div>
       </div>
     </div>
   );
