@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import { MenuLink } from "./MenuLink";
 
 export const UserNav = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -39,8 +40,8 @@ export const UserNav = () => {
 
       {isOpen && (
         <div className="w-[220px] absolute top-[60px] right-0 bg-white border rounded-xl shadow-md flex flex-col cursor-pointer">
-            <p>asdf</p>
-            <p>asdf</p>
+          <MenuLink label="Log in" onClick={() => console.log("")} />
+          <MenuLink label="Sign up" onClick={() => console.log("")} />
         </div>
       )}
     </div>
