@@ -2,12 +2,11 @@
 
 import React from "react";
 import { Modal } from "./Modal";
-import useLoginModal from "@/app/hooks/useLoginModal";
+import useSignupModal from "@/app/hooks/useSignupModal";
 import { CustomButton } from "../forms/CustomButton";
 
-export const LoginModal = () => {
-  const loginModal = useLoginModal();
-
+export const SignupModal = () => {
+  const signupModal = useSignupModal();
   const content = (
     <>
       <form className="space-y-4">
@@ -18,6 +17,11 @@ export const LoginModal = () => {
         />
         <input
           placeholder="Your password"
+          type="password"
+          className="w-full h-[54px] px-4 border border-gray-100 rounded-xl"
+        />
+        <input
+          placeholder="Repeat password"
           type="password"
           className="w-full h-[54px] px-4 border border-gray-100 rounded-xl"
         />
@@ -33,9 +37,9 @@ export const LoginModal = () => {
 
   return (
     <Modal
-      isOpen={loginModal.isOpen}
-      close={loginModal.close}
-      label="Log in"
+      isOpen={signupModal.isOpen}
+      close={signupModal.close}
+      label="Sign up"
       content={content}
     />
   );
